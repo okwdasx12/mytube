@@ -31,7 +31,8 @@
           <button type="button" class="btn btn-primary id">ID검색</button>
           <br />
           <br />
-          <div class="well" style="display: none;">ID = aaa</div>
+          <div class="well hid" style="display: none;">입력하신 이메일로 가입하신 아이디는 <br>' aaa ' 입니다</div>
+          <button type="button" class="btn btn-primary hid" style="display: none;" onclick="location.href='login.html'">로그인 창으로 가기</button>
         </fieldset>
       </form>
     </div>
@@ -40,11 +41,13 @@
     <script src="../js/bootstrap.js"></script>
     <script>
       $(".id").click(function () {
-        var email = document.getElementbyId("#email").value();
-        if (email != null) {
-          $(".well").text("id = aaa");
-          $(".well").show();
+        var email = $("#email").val();
+        console.log(email)
+        if (email == "" || null) {
+        	alert("이메일을 입력해 주세요.")
         } else {
+//         	$(".well").text("id = aaa");
+            $(".hid").show();
         }
       });
     </script>
