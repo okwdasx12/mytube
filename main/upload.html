@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <title>Insert title here</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../css/custom2.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <style>
+      .rl {
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .container {
+        display: flex;
+      }
+      .a {
+        border-radius: 10px;
+        margin-bottom: 10px;
+        width: 90%;
+      }
+      #upload {
+        padding: 10px;
+
+        border: 1px solid black;
+        background-color: #e1e3e8;
+      }
+      .b {
+        display: flex;
+        margin-top: 20px;
+        justify-content: space-between;
+      }
+      body {
+        background-color: #fff;
+      }
+      .form-inline {
+      }
+      th {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="rl">
+        <form role="form" class="form-inline">
+          <br /><br />
+          <table id="upload">
+            <tr>
+              <th>제목</th>
+              <td><input class="a" type="text" name="subject" /></td>
+            </tr>
+            <tr>
+              <th>아이디</th>
+              <td><input class="a" type="text" name="id" /></td>
+            </tr>
+
+            <tr>
+              <th>썸네일</th>
+              <td><input class="a" type="file" name="thumbnails" /></td>
+            </tr>
+            <tr>
+              <th>영상업로드</th>
+              <td><input class="a" type="file" name="filename" /></td>
+            </tr>
+            <tr>
+              <th>남은 글자 수</th>
+              <td><span> 50 </span></td>
+            </tr>
+            <tr>
+              <th>내용</th>
+              <td><textarea rows="15" cols="23" name="content"></textarea></td>
+            </tr>
+          </table>
+          <div class="b">
+            <div>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onclick="location.href = 'uploadList.html'"
+              >
+                업로드
+              </button>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onclick="location.href = 'upload.html'"
+              >
+                다시쓰기
+              </button>
+            </div>
+            <div>
+              <button
+                type="button"
+                class="btn btn-primary btn-lg"
+                onclick="location.href = 'loginMain.html'"
+              >
+                홈화면
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script>
+      //글자수 제한
+      $("textarea").keyup(function () {
+        var textLength = $(this).val().length;
+        var remain = 50 - textLength;
+        $("span").html(remain);
+
+        if (remain < 0) {
+          $("span").css("color", "red");
+        } else {
+          $("span").css("color", "black");
+        }
+      });
+    </script>
+  </body>
+</html>

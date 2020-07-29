@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap 101 Template</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../css/custom2.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <style>
+      body {
+        padding-top: 20px;
+      }
+
+      #banner {
+        margin-bottom: 30px;
+      }
+
+      .padd15 {
+        padding: 15px;
+      }
+
+      .marg-r {
+        margin-right: 15px;
+      }
+
+      .navbar-brand {
+        padding: 0;
+      }
+
+      .caption h3,
+      p {
+        text-align: center;
+      }
+
+      .grid-auto-flow {
+        text-align: center;
+        padding-bottom: 160px;
+      }
+
+      .rp {
+        margin-right: 6%;
+      }
+
+      .lp {
+        margin-left: 6%;
+      }
+
+      #footer {
+        padding: 4em 0 2em 0;
+        background-color: #25255e;
+        text-align: center;
+        color: #fff;
+      }
+
+      i {
+        font-size: 70px;
+      }
+
+      .icons {
+        display: flex;
+        justify-content: space-evenly;
+      }
+
+      .right {
+        text-align: center;
+      }
+
+      .rrr {
+        display: flex;
+        justify-content: flex-end;
+        padding-bottom: 25px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-ex1-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="loginMain.html"
+            ><img src="../images/rogo.jpg"
+          /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="uploadList.html">동영상 게시판 </a></li>
+            <li><a href="loginQnaList.html">질의 문답</a></li>
+            <!-- <li class="dropdown">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">드롭다운 <b class="caret"></b></a>
+            <ul class="dropdown-menu">
+              <li><a href="#">서브메뉴 1</a></li>
+              <li><a href="#">서브메뉴 2</a></li>
+              <li><a href="#">서브메뉴 3</a></li>
+            </ul>
+          </li> -->
+          </ul>
+
+          <div class="btn-toolbar navbar-right marg-r">
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-primary padd15"
+                onclick="location.href = 'update.html' "
+              >
+                회원정보 수정
+              </button>
+              <button
+                type="button"
+                class="btn btn-default padd15"
+                onclick="location.href = 'main.html' "
+              >
+                로그아웃
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </div>
+    <!-- /.navbar-collapse -->
+
+    <section id="banner" data-video="../images/banner">
+      <div class="inner">
+        <header>
+          <h1>Welcome to MYTUBE</h1>
+          <p>
+            자신만의 영상들을 업로드하고 이웃과 공유할 수 있는 사이트.<br />
+            MYTUBE에 오신것을 환영합니다.<br />
+            A site where you can upload your own videos and share them with your
+            neighbors.<br />
+            Welcome to MYTUBE.
+          </p>
+        </header>
+        <a href="#main" class="more">Learn More</a>
+      </div>
+    </section>
+
+    <div class="container">
+      <div class="row" id="main">
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="../images/DSC_6305.jpg" alt="..." />
+            <div class="caption">
+              <h3>제목과</h3>
+              <p>내용도 넣을 수 있다.</p>
+              <p>
+                <a class="btn btn-primary watch" role="button">Watch</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="../images/DSC_6305.jpg" alt="..." />
+            <div class="caption">
+              <h3>제목과</h3>
+              <p>내용도 넣을 수 있다.</p>
+              <p>
+                <a class="btn btn-primary watch" role="button">Watch</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="../images/DSC_6305.jpg" alt="..." />
+            <div class="caption">
+              <h3>제목과</h3>
+              <p>내용도 넣을 수 있다.</p>
+              <p>
+                <a class="btn btn-primary watch" role="button">Watch</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="../images/DSC_6305.jpg" alt="..." />
+            <div class="caption">
+              <h3>제목과</h3>
+              <p>내용도 넣을 수 있다.</p>
+              <p>
+                <a class="btn btn-primary watch" role="button">Watch</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="../images/DSC_6305.jpg" alt="..." />
+            <div class="caption">
+              <h3>제목과</h3>
+              <p>내용도 넣을 수 있다.</p>
+              <p>
+                <a class="btn btn-primary watch" role="button">Watch</a>
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4">
+          <div class="thumbnail">
+            <img src="../images/DSC_6305.jpg" alt="..." />
+            <div class="caption">
+              <h3>제목과</h3>
+              <p>내용도 넣을 수 있다.</p>
+              <p>
+                <button type="button" class="btn btn-primary watch">
+                  Watch
+                </button>
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="rrr">
+        <form>
+          <div class="btn-group">
+            <button type="button" class="btn btn-default">아이디</button>
+            <button
+              type="button"
+              class="btn btn-default dropdown-toggle"
+              data-toggle="dropdown"
+            >
+              <span class="caret"></span>
+            </button>
+            <ul class="dropdown-menu" role="menu">
+              <li><a href="#">아이디</a></li>
+              <li><a href="#">제목</a></li>
+            </ul>
+          </div>
+          <input type="email" placeholder="검색" />
+          <button type="submit">확인</button>
+        </form>
+      </div>
+      <div class="right">
+        <div class="grid-auto-flow btn-group">
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            onclick="location.href = 'upload.html' "
+          >
+            동영상 업로드
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary btn-lg"
+            onclick="location.href = 'uploadList.html' "
+          >
+            업로드 영상보기
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <footer id="footer">
+      <div class="container">
+        <div class="inner">
+          <h2>Etiam veroeros lorem</h2>
+          <p>
+            Pellentesque eleifend malesuada efficitur. Curabitur volutpat dui
+            mi, ac imperdiet dolor tincidunt nec. Ut erat lectus, dictum sit
+            amet lectus a, aliquet rutrum mauris. Etiam nec lectus hendrerit,
+            consectetur risus viverra, iaculis orci. Phasellus eu nibh ut mi
+            luctus auctor. Donec sit amet dolor in diam feugiat venenatis.
+          </p>
+
+          <ul class="icons">
+            <i class="fab fa-facebook-square"></i>
+            <i class="fab fa-twitter-square"></i>
+            <i class="fas fa-envelope-square"></i>
+            <i class="fab fa-instagram"></i>
+          </ul>
+          <p class="copyright">
+            &copy; Untitled. Design:
+            <a href="https://templated.co">TEMPLATED</a>. Images:
+            <a href="https://unsplash.com/">Unsplash</a>. Videos:
+            <a href="http://coverr.co/">Coverr</a>.
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script>
+      $(".carousel").carousel();
+
+      $(".watch").click(function () {
+        open("a_play.html", "play", "width=auto");
+      });
+      // 	function winopen(){
+      // 			open('a_play.html', 'play', 'width=1200, height=800');
+      // 		}
+    </script>
+  </body>
+</html>

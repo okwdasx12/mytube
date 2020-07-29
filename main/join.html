@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap 101 Template</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../css/custom2.css" rel="stylesheet" />
+    <link href="../css/main.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <style>
+      body {
+        padding-top: 20px;
+      }
+      #tit {
+        text-align: center;
+      }
+      .form-control {
+        margin-left: 20%;
+        width: 60%;
+      }
+      .btn-block {
+        margin-left: 20%;
+        width: 60%;
+      }
+      .form-text {
+        margin-left: 20%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <form name="frm">
+        <br /><br />
+        <h2 id="tit">회원가입</h2>
+        <span class="form-text">아이디</span>
+        <input
+          type="text"
+          name="id"
+          id="id"
+          class="form-control"
+          placeholder="아이디를 입력하세요"
+          required
+          autofocus
+          value=""
+        /><br />
+        <input
+          type="button"
+          class="form-text"
+          value="ID중복확인"
+          onclick="winopen()"
+        /><br /><br />
+        <span class="form-text">비밀번호</span>
+        <input
+          type="password"
+          name="passwd"
+          id="inputPassword"
+          class="form-control"
+          placeholder="비밀번호를 입력하세요"
+          required
+        /><br />
+        <span class="form-text">비밀번호 확인</span>
+        <input
+          type="password"
+          name="passwd"
+          id="inputPassword2"
+          class="form-control"
+          placeholder="비밀번호를 입력하세요"
+          required
+        />
+        <span class="form-text" id="passwdMessage"></span><br /><br />
+        <span class="form-text">이름</span>
+        <input
+          type="text"
+          name="name"
+          id="inputEmail"
+          class="form-control"
+          placeholder="이름을 입력하세요"
+          required
+          autofocus
+        /><br />
+        <span class="form-text">이메일</span>
+        <input
+          type="email"
+          name="email"
+          id="inputEmail"
+          class="form-control"
+          placeholder="이메일을 입력하세요"
+          required
+          autofocus
+        />
+        <br /><br /><br />
+        <div class="checkbox"></div>
+
+        <button
+          class="btn btn-lg btn-primary btn-block"
+          type="submit"
+          onclick="location.href = 'login.html'"
+        >
+          회원가입
+        </button>
+      </form>
+    </div>
+
+    <script>
+      //문서객체 (document)
+      var passwd = document.getElementById("inputPassword");
+      var passwd2 = document.getElementById("inputPassword2");
+      var spanMessage = document.getElementById("passwdMessage");
+
+      passwd2.onkeyup = function () {
+        console.log("키 눌렀다 떼어짐");
+
+        if (passwd.value != passwd2.value) {
+          spanMessage.innerHTML = "패스워드 불일치";
+        } else {
+          spanMessage.innerHTML = "패스워드 일치";
+        }
+      };
+
+      function winopen() {
+        var id = document.getElementById("id").value;
+        console.log("id = " + id);
+
+        if (id == "") {
+          alert("아이디를 입력하세요");
+          document.frm.id.focus();
+          return;
+        }
+
+        // 새창 열어서 jsp요청   window.open()
+        open("join_IDCheck.html?id=" + id, "dupCheck", "width=400,height=200");
+      }
+
+      // 		function chkPW(){
+
+      // 			 var pw = $("#inputPassword").val();
+      // 			 var num = pw.search(/[0-9]/g);
+      // 			 var eng = pw.search(/[a-z]/ig);
+      // 			 var spe = pw.search(/[`~!@@#$%^&*|₩₩₩'₩";:₩/?]/gi);
+
+      // 			 if(pw.length < 8 || pw.length > 20){
+
+      // 			  alert("8자리 ~ 20자리 이내로 입력해주세요.");
+      // 			  return false;
+      // 			 }else if(pw.search(/\s/) != -1){
+      // 			  alert("비밀번호는 공백 없이 입력해주세요.");
+      // 			  return false;
+      // 			 }else if(num < 0 || eng < 0 || spe < 0 ){
+      // 			  alert("영문,숫자, 특수문자를 혼합하여 입력해주세요.");
+      // 			  return false;
+      // 			 }else {
+      // 				console.log("통과");
+      // 			    return true;
+      // 			 }
+
+      // 			}
+    </script>
+  </body>
+</html>

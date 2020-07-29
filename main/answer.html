@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Insert title here</title>
+    <link href="../css/bootstrap.css" rel="stylesheet" />
+    <link rel="shortcut icon" href="" type="image/x-icon" />
+    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
+    <link href="../css/custom2.css" rel="stylesheet" />
+    <style>
+      body {
+        padding-top: 20px;
+      }
+
+      #banner {
+        margin-bottom: 30px;
+      }
+
+      #tit {
+        text-align: center;
+      }
+
+      .padd15 {
+        padding: 15px;
+      }
+
+      .marg-r {
+        margin-right: 15px;
+      }
+
+      .navbar-brand {
+        padding: 0;
+      }
+      .well {
+        margin-top: 150px;
+      }
+      .box {
+        border: 1px solid;
+        border-radius: 5px;
+        padding: 24px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button
+            type="button"
+            class="navbar-toggle"
+            data-toggle="collapse"
+            data-target=".navbar-ex1-collapse"
+          >
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span> <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="loginMain.html"
+            ><img src="../images/rogo.jpg"
+          /></a>
+        </div>
+
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+          <ul class="nav navbar-nav">
+            <li><a href="uploadList.html">동영상 게시판 </a></li>
+            <li><a href="loginQnaList.html">질의 문답</a></li>
+            <!-- <li class="dropdown">
+	            <a href="#" class="dropdown-toggle" data-toggle="dropdown">드롭다운 <b class="caret"></b></a>
+	            <ul class="dropdown-menu">
+	              <li><a href="#">서브메뉴 1</a></li>
+	              <li><a href="#">서브메뉴 2</a></li>
+	              <li><a href="#">서브메뉴 3</a></li>
+	            </ul>
+	          </li> -->
+          </ul>
+
+          <div class="btn-toolbar navbar-right marg-r">
+            <div class="btn-group">
+              <button
+                type="button"
+                class="btn btn-primary padd15"
+                onclick="location.href = 'update.html' "
+              >
+                회원정보 수정
+              </button>
+              <button
+                type="button"
+                class="btn btn-default padd15"
+                onclick="location.href = 'main.html' "
+              >
+                로그아웃
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+
+      <div class="well well-lg">
+        Title : 비밀번호 변경은 어떻게 하나요?
+        <br /><br />
+        Q : 아이디가 해킹당한것 같아서 비밀번호를 변경하려는데 어디서 변경하는지
+        못찾겠습니다. ㅠ ㅅ ㅠ
+      </div>
+      <div class="box">
+        A : 우측 상단 회원정보 수정 버튼을 클릭하시면 변경 가능합니다.
+      </div>
+      <div style="display: flex; justify-content: flex-end;">
+        <button
+          type="button"
+          class="btn btn-primary passwd"
+          style="margin-top: 15px; margin-right: 10px;"
+        >
+          수정
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary del"
+          style="margin-top: 15px; margin-right: 10px;"
+        >
+          삭제
+        </button>
+        <button
+          type="button"
+          class="btn btn-primary"
+          style="margin-top: 15px;"
+          onclick="location.href = 'qnaList.html' "
+        >
+          목록보기
+        </button>
+      </div>
+    </div>
+    <script src="../js/jquery-3.5.1.js"></script>
+    <script src="../js/bootstrap.js"></script>
+    <script>
+      $(".passwd").click(function () {
+        var passwd = prompt("글 작성시 사용했던 비밀번호를 입력하세요.", "");
+        if (passwd == "") {
+          alert("비밀번호 미입력.");
+          location = "answer.html";
+        } else {
+          location = "writeModify.html";
+        }
+      });
+      $(".del").click(function () {
+        var passwd = prompt("글 작성시 사용했던 비밀번호를 입력하세요.", "");
+        if (passwd == "") {
+          alert("비밀번호 미입력.");
+          location = "answer.html";
+        } else {
+          var answer = confirm("정말 삭제하시겠습니까?");
+          if (answer == true) {
+            location = "qnaList.html";
+          } else {
+            location = "answer.html";
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
