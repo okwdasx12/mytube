@@ -1,55 +1,84 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Insert title here</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
-    <link href="../css/custom2.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="container">
-      <form class="form-horizontal" role="form">
-        <fieldset>
-          <br />
-          <br />
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+<link href="../css/bootstrap.css" rel="stylesheet" />
+<link href="../css/bootstrap-theme.css" rel="stylesheet" />
+<link href="../css/custom2.css" rel="stylesheet" />
+<link rel="shortcut icon" href="" type="image/x-icon" />
+</head>
+<body>
+	<div class="container">
+		<form class="form-horizontal" role="form">
+			<fieldset>
+				<br /> <br />
+				<h2>
+					비밀번호 찾기
+				</h2>
+				<hr>
 
-          <div class="form-group">
-            <label for="ID" class="col-xs-12 col-lg-12">아이디</label>
-            <div class="col-xs-12 col-lg-12">
-              <input
-                type="text"
-                class="form-control"
-                id="ID"
-                placeholder="ID입력"
-              />
-            </div>
-          </div>
-          <br />
-          <button type="button" class="btn btn-primary id">비밀번호 찾기</button>
-          <br />
-          <br />
-          <div class="well hid" style="display: none;">입력하신 이메일로 가입하신 아이디는 <br>' aaa ' 입니다</div>
-          <button type="button" class="btn btn-primary hid" style="display: none;" onclick="location.href='login.html'">로그인 창으로 가기</button>
-        </fieldset>
-      </form>
-    </div>
-    <script src="../js/main.js"></script>
-    <script src="../js/jquery-3.5.1.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <script>
-      $(".id").click(function () {
-        var email = $("#email").val();
-        console.log(email)
-        if (email == "" || null) {
-        	alert("이메일을 입력해 주세요.")
-        } else {
-//         	$(".well").text("id = aaa");
-            $(".hid").show();
-        }
-      });
-    </script>
-  </body>
+				<div class="form-group">
+					<label for="ID" id="ID" class="col-xs-12 col-lg-12">아이디</label>
+					<div class="col-xs-12 col-lg-12">
+						<input type="text" class="form-control" id="id" placeholder="ID입력" />
+					</div>
+					<br><br><br><br>
+					<label for="email" id="Email"class="col-xs-12 col-lg-12">이메일</label>
+					
+					<div class="col-xs-12 col-lg-12">
+						<input type="email" class="form-control" id="email" placeholder="email입력" />
+					</div>
+					<br><br><br><br>
+					<div class="col-xs-12 col-lg-12">
+						<button type="button" class="btn btn-primary emsub">이메일로 인증번호 발송</button>
+					</div>
+					<br><br><br>
+					<div class="col-xs-6 col-lg-3">
+						<input type="text" id="num" class="form-control"placeholder="인증번호 입력">
+					</div>
+				</div>
+				<br>
+				<button type="button" class="btn btn-primary pass">비밀번호 찾기</button>
+				<br /> <br />
+				<div class="well hid" style="display: none;">
+					이메일로 인증하신 아이디의 비밀번호는 <br>' 1234 ' 입니다.
+					<br> 보안을 위하여 비밀번호를 변경을 권장합니다. 
+				</div>
+				<button type="button" class="btn btn-primary hid"
+					style="display: none;" onclick="location.href='login.html'">로그인
+					창으로 가기
+				</button>
+			</fieldset>
+		</form>
+	</div>
+	<script src="../js/main.js"></script>
+	<script src="../js/jquery-3.5.1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script>
+		$(".emsub").click(function() {
+			var id = $("#id").val();
+			console.log(id)
+			var email = $("#email").val();
+			console.log(email)
+			if ((email == "" || null)) {
+				alert("아이디와 이메일을 모두 입력해 주세요.")
+			} else {
+				//         	$(".well").text("id = aaa");
+// 				$(".hid").show();
+			}
+		});
+		$(".pass").click(function() {
+			var num = $("#num").val();
+			console.log(num)
+			if (num == "" || null) {
+				alert("인증번호를 입력해 주세요.")
+			} else {
+				//         	$(".well").text("id = aaa");
+				$(".hid").show();
+			}
+		});
+	</script>
+</body>
 </html>

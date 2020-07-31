@@ -1,55 +1,72 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Insert title here</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
-    <link href="../css/custom2.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-  </head>
-  <body>
-    <div class="container">
-      <form class="form-horizontal" role="form">
-        <fieldset>
-          <br />
-          <br />
-
-          <div class="form-group">
-            <label for="email" class="col-xs-12 col-lg-12">이메일</label>
-            <div class="col-xs-12 col-lg-12">
-              <input
-                type="email"
-                class="form-control"
-                id="email"
-                placeholder="email입력"
-              />
-            </div>
-          </div>
-          <br />
-          <button type="button" class="btn btn-primary id">ID검색</button>
-          <br />
-          <br />
-          <div class="well hid" style="display: none;">입력하신 이메일로 가입하신 아이디는 <br>' aaa ' 입니다</div>
-          <button type="button" class="btn btn-primary hid" style="display: none;" onclick="location.href='login.html'">로그인 창으로 가기</button>
-        </fieldset>
-      </form>
-    </div>
-    <script src="../js/main.js"></script>
-    <script src="../js/jquery-3.5.1.js"></script>
-    <script src="../js/bootstrap.js"></script>
-    <script>
-      $(".id").click(function () {
-        var email = $("#email").val();
-        console.log(email)
-        if (email == "" || null) {
-        	alert("이메일을 입력해 주세요.")
-        } else {
-//         	$(".well").text("id = aaa");
-            $(".hid").show();
-        }
-      });
-    </script>
-  </body>
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+<link href="../css/bootstrap.css" rel="stylesheet" />
+<link href="../css/bootstrap-theme.css" rel="stylesheet" />
+<link href="../css/custom2.css" rel="stylesheet" />
+<link rel="shortcut icon" href="" type="image/x-icon" />
+</head>
+<body>
+	<div class="container">
+		<form class="form-horizontal" role="form">
+			<fieldset>
+				<br /> <br />
+				<h2>아이디 찾기</h2>
+				<hr>
+				<div class="form-group">
+					<label for="email" class="col-xs-12 col-lg-12">회원정보에 등록한 이메일로 찾기</label>
+					<div class="col-xs-12 col-lg-12">
+						<input type="email" class="form-control" id="email" placeholder="email입력" />
+					</div>
+					<br><br><br><br>
+					<div class="col-xs-12 col-lg-12">
+					<button type="button" class="btn btn-primary emsub">이메일로 인증번호 발송</button>
+					</div>
+					<br><br><br>
+					<div class="col-xs-6 col-lg-2">
+						<input type="text" id="num" class="form-control" placeholder="인증번호 입력">
+					</div>
+				</div>
+				<br>
+				<button type="button" class="btn btn-primary id">인증하기</button>
+			
+				<br> <br>
+				<div class="well hid" style="display: none;">
+					입력하신 이메일로 가입하신 아이디는 <br>' aaa ' 입니다
+				</div>
+				<button type="button" class="btn btn-primary hid"
+					style="display: none;" onclick="location.href='login.html'">로그인
+					창으로 가기</button>
+			</fieldset>
+		</form>
+	</div>
+	<script src="../js/main.js"></script>
+	<script src="../js/jquery-3.5.1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+	<script>
+		$(".emsub").click(function() {
+			var num = $("#email").val();
+			console.log(num)
+			if (num == "" || null) {
+				alert("이메일을 입력해 주세요.")
+			} else {
+				//         	$(".well").text("id = aaa");
+// 				$(".hid").show();
+			}
+		});
+		$(".id").click(function() {
+			var email = $("#num").val();
+			console.log(email)
+			if (email == "" || null) {
+				alert("인증번호를 입력해 주세요.")
+			} else {
+				//         	$(".well").text("id = aaa");
+				$(".hid").show();
+			}
+		});
+	</script>
+</body>
 </html>
