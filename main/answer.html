@@ -211,9 +211,11 @@ cursor: pointer;
 			str += '<div class="box box2"> ID : '+$('#replyer').val()+'<br>';
 			str += 'A : '+ $('#reply').val()+'</div>';
 			str += '<div style="display: flex; justify-content: flex-end">';
+			
 			str +=	'<button type="button" class="btn btn-primary btnAddReply2"';
 			str +=		'style="margin-top: 15px; margin-right: 10px;">댓글에 답변하기';
 			str +=	'</button>';
+			str += '<div style="display: none" class="display">';
 			str +=	'<button type="button" class="btn btn-primary modi2"';
 			str +=		'style="margin-top: 15px; margin-right: 10px;">수정';
 			str +=	'</button>';
@@ -221,12 +223,12 @@ cursor: pointer;
 			str +=		'style="margin-top: 15px">삭제';
 			str +=	'</button>';
 			str += '</div>';
+			str += '</div>';
 			$('div.replyBox').append(str);
 		});
 		
 		$('.replyBox').on('click', 'div.box2',function(){
-			$(this).next().fadeToggle();
-			
+			$('.display').fadeToggle();
 		});
 // 		$('.replyBox').on('click', function(){
 // 			$(this).next().toggle();
