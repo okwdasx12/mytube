@@ -52,10 +52,13 @@
 			console.log(num)
 			if (num == "" || null) {
 				alert("이메일을 입력해 주세요.")
+				return;
 			} else {
 				//         	$(".well").text("id = aaa");
 // 				$(".hid").show();
+				alert('인증번호 발송');
 			}
+			
 		});
 		$(".id").click(function() {
 			var email = $("#num").val();

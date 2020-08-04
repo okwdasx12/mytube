@@ -42,6 +42,10 @@
       .th {
         text-align: center;
       }
+      .page{
+      display: flex;
+      justify-content: center;
+      }
     </style>
   </head>
   <body>
@@ -102,7 +106,7 @@
     </div>
 
     <div class="container">
-      <br /><br />
+      <br /><br /><br />
       <div class="well well-lg"><h1>자주 묻는 질문</h1></div>
 
       <table class="table table-striped">
@@ -145,6 +149,17 @@
           <td class="th">9</td>
         </tr>
       </table>
+      <div class="page">
+	      <ul class="pagination">
+		    <li class="disabled"><a href="#">«</a></li>
+		    <li class="active"><a href="#">1</a></li>
+		    <li><a href="#">2</a></li>
+		    <li><a href="#">3</a></li>
+		    <li><a href="#">4</a></li>
+		    <li><a href="#">5</a></li>
+		    <li><a href="#">»</a></li>
+		  </ul>
+	  </div>
 
       <div class="right">
         <button class="btn btn-primary" onclick="location.href='write.html'">

@@ -1,118 +1,98 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Bootstrap 101 Template</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
-    <link href="../css/custom2.css" rel="stylesheet" />
-    <link href="../css/main.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-    <style>
-      body {
-        padding-top: 20px;
-      }
-      #banner {
-        margin-bottom: 30px;
-      }
-      #tit {
-        text-align: center;
-      }
-      .padd15 {
-        padding: 15px;
-      }
-      .marg-r {
-        margin-right: 15px;
-      }
-      .navbar-brand {
-        padding: 0;
-      }
-      .form-control {
-        margin-left: 20%;
-        width: 60%;
-      }
-      .btn-block {
-        margin-left: 20%;
-        width: 60%;
-      }
-      .form-text {
-        margin-left: 20%;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <form name="frm">
-        <br /><br />
-        <h2 id="tit">정보 수정</h2>
-        <span class="form-text">새 비밀번호</span>
-        <input
-          type="password"
-          name="passwd"
-          id="inputPassword"
-          class="form-control"
-          placeholder="변경할 비밀번호를 입력하세요"
-          required
-        /><br />
-        <span class="form-text">새 비밀번호 확인</span>
-        <input
-          type="password"
-          name="passwd"
-          id="inputPassword2"
-          class="form-control"
-          placeholder="변경할 비밀번호를 입력하세요"
-          required
-        />
-        <span class="form-text" id="passwdMessage"></span><br /><br />
-        <span class="form-text">이름</span>
-        <input
-          type="text"
-          name="name"
-          id="inputEmail"
-          class="form-control"
-          placeholder="변경할 이름을 입력하세요"
-          required
-          autofocus
-        /><br />
-        <span class="form-text">이메일</span>
-        <input
-          type="email"
-          name="email"
-          id="inputEmail"
-          class="form-control"
-          placeholder="변경할 이메일을 입력하세요"
-          required
-          autofocus
-        />
-        <br /><br /><br />
-        <div class="checkbox"></div>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Bootstrap 101 Template</title>
+<link href="../css/bootstrap.css" rel="stylesheet" />
+<link href="../css/bootstrap-theme.css" rel="stylesheet" />
+<link href="../css/custom2.css" rel="stylesheet" />
+<link href="../css/main.css" rel="stylesheet" />
+<link rel="shortcut icon" href="" type="image/x-icon" />
+<style>
+body {
+	padding-top: 20px;
+}
 
-        <button
-          class="btn btn-lg btn-primary btn-block"
-          type="submit"
-          onclick="location.href = 'loginMain.html'"
-        >
-          정보 수정
-        </button>
-      </form>
-    </div>
+#banner {
+	margin-bottom: 30px;
+}
 
-    <script>
-      //문서객체 (document)
-      var passwd = document.getElementById("inputPassword");
-      var passwd2 = document.getElementById("inputPassword2");
-      var spanMessage = document.getElementById("passwdMessage");
+#tit {
+	text-align: center;
+}
 
-      passwd2.onkeyup = function () {
-        console.log("키 눌렀다 떼어짐");
+.padd15 {
+	padding: 15px;
+}
 
-        if (passwd.value != passwd2.value) {
-          spanMessage.innerHTML = "패스워드 불일치";
-        } else {
-          spanMessage.innerHTML = "패스워드 일치";
-        }
-      };
-    </script>
-  </body>
+.marg-r {
+	margin-right: 15px;
+}
+
+.navbar-brand {
+	padding: 0;
+}
+
+.form-control {
+	margin-left: 20%;
+	width: 60%;
+}
+
+.btn-block {
+	margin-left: 20%;
+	width: 60%;
+}
+
+.form-text {
+	margin-left: 20%;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<form name="frm" action="loginMain.html">
+			<br />
+			<br />
+			<h2 id="tit">정보 수정</h2>
+			<span class="form-text">새 비밀번호</span> <input type="password"
+				name="passwd" id="inputPassword" class="form-control"
+				placeholder="변경할 비밀번호를 입력하세요" required /><br /> <span
+				class="form-text">새 비밀번호 확인</span> <input type="password"
+				name="passwd" id="inputPassword2" class="form-control"
+				placeholder="변경할 비밀번호를 입력하세요" required /> <span
+				class="form-text" id="passwdMessage"></span><br />
+			<br /> <span class="form-text">이름</span> <input type="text"
+				name="name" id="inputEmail" class="form-control"
+				placeholder="변경할 이름을 입력하세요" required autofocus /><br /> <span
+				class="form-text">이메일</span> <input type="email" name="email"
+				id="inputEmail" class="form-control" placeholder="변경할 이메일을 입력하세요"
+				required autofocus /> <br />
+			<br />
+			<br />
+			<div class="checkbox"></div>
+
+			<button class="btn btn-lg btn-primary btn-block subm" type="submit"
+				>정보 수정 하기
+			</button>
+		</form>
+	</div>
+
+	<script>
+		//문서객체 (document)
+		var passwd = document.getElementById("inputPassword");
+		var passwd2 = document.getElementById("inputPassword2");
+		var spanMessage = document.getElementById("passwdMessage");
+
+		passwd2.onkeyup = function() {
+			console.log("키 눌렀다 떼어짐");
+
+			if (passwd.value != passwd2.value) {
+				spanMessage.innerHTML = "패스워드 불일치";
+			} else {
+				spanMessage.innerHTML = "패스워드 일치";
+			}
+		};
+	</script>
+</body>
 </html>
