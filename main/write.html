@@ -1,64 +1,60 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Insert title here</title>
-    <link href="../css/bootstrap.css" rel="stylesheet" />
-    <link href="../css/bootstrap-theme.css" rel="stylesheet" />
-    <link href="../css/custom2.css" rel="stylesheet" />
-    <link rel="shortcut icon" href="" type="image/x-icon" />
-    <style>
-      body {
-        padding-top: 20px;
-      }
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Insert title here</title>
+<link href="../css/bootstrap.css" rel="stylesheet" />
+<link href="../css/bootstrap-theme.css" rel="stylesheet" />
+<link href="../css/custom2.css" rel="stylesheet" />
+<link rel="shortcut icon" href="" type="image/x-icon" />
+<style>
+body {
+	padding-top: 20px;
+}
 
-      #banner {
-        margin-bottom: 30px;
-      }
+#banner {
+	margin-bottom: 30px;
+}
 
-      .padd15 {
-        padding: 15px;
-      }
+.padd15 {
+	padding: 15px;
+}
 
-      .marg-r {
-        margin-right: 15px;
-      }
+.marg-r {
+	margin-right: 15px;
+}
 
-      .navbar-brand {
-        padding: 0;
-      }
-      .right {
-        text-align: right;
-      }
-    </style>
-  </head>
-  <body>
-    <div class="container">
-      <nav class="navbar navbar-default navbar-fixed-top" role="navigation">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button
-            type="button"
-            class="navbar-toggle"
-            data-toggle="collapse"
-            data-target=".navbar-ex1-collapse"
-          >
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span> <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="loginMain.html"
-            ><img src="../images/rogo.jpg"
-          /></a>
-        </div>
+.navbar-brand {
+	padding: 0;
+}
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse navbar-ex1-collapse">
-          <ul class="nav navbar-nav">
-            <li><a href="uploadList.html">동영상 게시판 </a></li>
-            <li><a href="qnaList.html">질의 문답</a></li>
-            <!-- <li class="dropdown">
+.right {
+	text-align: right;
+}
+</style>
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+			<!-- Brand and toggle get grouped for better mobile display -->
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle" data-toggle="collapse"
+					data-target=".navbar-ex1-collapse">
+					<span class="sr-only">Toggle navigation</span> <span
+						class="icon-bar"></span> <span class="icon-bar"></span> <span
+						class="icon-bar"></span>
+				</button>
+				<a class="navbar-brand" href="loginMain.html"><img
+					src="../images/rogo.jpg" /></a>
+			</div>
+
+			<!-- Collect the nav links, forms, and other content for toggling -->
+			<div class="collapse navbar-collapse navbar-ex1-collapse">
+				<ul class="nav navbar-nav">
+					<li><a href="uploadList.html">동영상 게시판 </a></li>
+					<li><a href="qnaList.html">질의 문답</a></li>
+					<!-- <li class="dropdown">
             <a href="#" class="dropdown-toggle" data-toggle="dropdown">드롭다운 <b class="caret"></b></a>
             <ul class="dropdown-menu">
               <li><a href="#">서브메뉴 1</a></li>
@@ -66,88 +62,69 @@
               <li><a href="#">서브메뉴 3</a></li>
             </ul>
           </li> -->
-          </ul>
+				</ul>
 
-          <div class="btn-toolbar navbar-right marg-r">
-            <div class="btn-group">
-              <button
-                type="button"
-                class="btn btn-primary padd15"
-                onclick="location.href = 'login.html' "
-              >
-                로그인
-              </button>
-              <button
-                type="button"
-                class="btn btn-default padd15"
-                onclick="location.href = 'join.html' "
-              >
-                회원가입
-              </button>
-            </div>
-          </div>
-        </div>
-      </nav>
-      <form class="form-horizontal" role="form">
-        <fieldset>
-          <br />
-          <br />
+				<div class="btn-toolbar navbar-right marg-r">
+					<div class="btn-group">
+						<button type="button" class="btn btn-primary padd15"
+							onclick="location.href = 'login.html' ">
+							로그인</button>
+						<button type="button" class="btn btn-default padd15"
+							onclick="location.href = 'join.html' ">
+							회원가입</button>
+					</div>
+				</div>
+			</div>
+		</nav>
+		<form class="form-horizontal" role="form" action="qnaList.html">
+			<fieldset>
+				<br /> <br />
 
-          <div class="form-group">
-            <label for="Name" class="col-xs-2 col-lg-2 control-label"
-              >이름</label
-            >
-            <div class="col-xs-10 col-lg-10">
-              <input type="text" class="form-control" placeholder="이름" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="password" class="col-xs-2 col-lg-2 control-label"
-              >게시글 비밀번호</label
-            >
-            <div class="col-xs-10 col-lg-10">
-              <input
-                type="password"
-                class="form-control"
-                placeholder="게시글 비밀번호"
-              />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="email" class="col-xs-2 col-lg-2 control-label"
-              >이메일</label
-            >
-            <div class="col-xs-10 col-lg-10">
-              <input type="email" class="form-control" placeholder="이메일" />
-            </div>
-          </div>
-          <br />
-          <div class="form-group">
-            <label for="title" class="col-xs-2 col-lg-2 control-label"
-              >제목</label
-            >
-            <div class="col-xs-10 col-lg-10">
-              <input type="text" class="form-control" placeholder="제목" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label for="content" class="col-xs-2 col-lg-2 control-label"
-              >내용</label
-            >
-            <div class="col-xs-10 col-lg-10">
-              <textarea rows="15" class="form-control"></textarea>
-            </div>
-          </div>
-        </fieldset>
-      </form>
-      <div class="right">
-        <button class="btn btn-primary" onclick="location.href='qnaList.html'">
-          올리기
-        </button>
-      </div>
-    </div>
-    <script src="../js/main.js"></script>
-    <script src="../js/jquery-3.5.1.js"></script>
-    <script src="../js/bootstrap.js"></script>
-  </body>
+				<div class="form-group">
+					<label for="Name" class="col-xs-2 col-lg-2 control-label">이름</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="text" class="form-control" placeholder="이름" required
+          autofocus />
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="password" class="col-xs-2 col-lg-2 control-label">게시글
+						비밀번호</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="password" class="form-control" placeholder="게시글 비밀번호" required
+          autofocus/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="email" class="col-xs-2 col-lg-2 control-label">이메일</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="email" class="form-control" placeholder="이메일" required
+          autofocus/>
+					</div>
+				</div>
+				<br />
+				<div class="form-group">
+					<label for="title" class="col-xs-2 col-lg-2 control-label">제목</label>
+					<div class="col-xs-10 col-lg-10">
+						<input type="text" class="form-control" placeholder="제목"  required
+          autofocus/>
+					</div>
+				</div>
+				<div class="form-group">
+					<label for="content" class="col-xs-2 col-lg-2 control-label">내용</label>
+					<div class="col-xs-10 col-lg-10" >
+						<textarea rows="15" class="form-control" required
+          autofocus></textarea>
+					</div>
+				</div>
+			</fieldset>
+		<div class="right">
+			<button class="btn btn-primary"  type="submit">올리기</button>
+		</div>
+		</form>
+	</div>
+	<script src="../js/main.js"></script>
+	<script src="../js/jquery-3.5.1.js"></script>
+	<script src="../js/bootstrap.js"></script>
+</body>
 </html>
